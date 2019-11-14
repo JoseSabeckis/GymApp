@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:AppXEvolution"
+             x:Class="AppXEvolution.MainPage">
+
+    <StackLayout>
+        <!-- Place new controls here -->
+
+        <ListView HasUnevenRows="True" x:Name="ItemListClientes">
+
+            <ListView.ItemTemplate>
+
+                <DataTemplate>
+
+                    <ViewCell>
+
+                        <StackLayout Padding="10">
+
+                            <Label Text="{Binding Apellido}" LineBreakMode="NoWrap" FontSize="Large"></Label>
+                            <Label Text="{Binding Nombre}"  LineBreakMode="NoWrap" FontSize="Large"></Label>
+                            <Label Text="{Binding Dni}"  LineBreakMode="NoWrap" FontSize="Medium"></Label>
+                            <Label Text="{Binding Telefono}"  LineBreakMode="NoWrap" FontSize="Medium"></Label>
+                            <Label Text="{Binding Domicilio}"  LineBreakMode="NoWrap" FontSize="Small"></Label>
+                            <Label Text="{Binding FechaNacimiento}"  LineBreakMode="NoWrap" FontSize="Small"></Label>
+                            <Label Text="{Binding Sexo}"  LineBreakMode="NoWrap" FontSize="Small"></Label>
+                            <Label Text="{Binding GrupoSanguineo}"  LineBreakMode="NoWrap" FontSize="Small"></Label>
+
+                        </StackLayout>
+                        
+                    </ViewCell>
+                    
+                </DataTemplate>
+                
+                
+            </ListView.ItemTemplate>
+            
+        </ListView>
+        
+    </StackLayout>
+
+</ContentPage>
