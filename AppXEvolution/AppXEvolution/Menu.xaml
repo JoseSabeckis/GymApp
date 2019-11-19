@@ -1,29 +1,35 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
+
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="AppXEvolution.Menu" BackgroundColor="Black">
-    
+             x:Class="AppXEvolution.Menu"
+             xmlns:local="clr-namespace:AppXEvolution">
+    <NavigationPage.TitleView>
+        <Label Text="Evolution Training Center" HorizontalOptions="Center"></Label>
+    </NavigationPage.TitleView>
+
+
     <Grid VerticalOptions="CenterAndExpand" BackgroundColor="Black">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
-        <Label HorizontalOptions="Center" VerticalOptions="Center" TextColor="Orange">-- Bienvenido! --</Label>
-        <Label Grid.Row="1"></Label>
+
         <Button x:Name="ButtonClientes"
-             Text="Clientes" BackgroundColor="DarkOrange"
-             Grid.Row="2"/>
+             Text="Clientes" BackgroundColor="Coral" BorderRadius="40" Padding="5" Margin="10"
+                Grid.Row="2" />
+
         <Button x:Name="ButtonClases"
-             Text="Clases" BackgroundColor="OrangeRed"
+             Text="Clases" BackgroundColor="OrangeRed" BorderRadius="40" Padding="5" Margin="10"
              Grid.Row="3"/>
+
         <Button x:Name="ButtonRutinas"
-             Text="Rutinas" BackgroundColor="DarkOrange"
+             Text="Rutinas" BackgroundColor="DarkOrange" BorderRadius="40" Padding="5" Margin="10"
              Grid.Row="4"/>
-        <Button x:Name="ButtonEjercicios"
-             Text="Ejercicios" BackgroundColor="OrangeRed"
-             Grid.Row="5"/>
-        <Label Grid.Row="6"></Label>
+        <ImageButton Grid.Row="5" WidthRequest="100" HeightRequest="100" Source="{local:ImageResource AppXEvolution.rutina.png}" BackgroundColor="Transparent" Padding="5" Margin="10" x:Name="GymEvolution2"></ImageButton>
+
     </Grid>
+
 
 </ContentPage>

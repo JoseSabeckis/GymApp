@@ -11,7 +11,13 @@ namespace AppXEvolution
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new Menu());
+            MainPage = new NavigationPage(new Menu())
+            {
+                BarBackgroundColor = Color.FromHex("F05410"),
+                BarTextColor = Color.Black,
+                Title = "Evolution Training Center"
+            };
+            
         }
 
         protected override void OnStart()

@@ -16,11 +16,17 @@ namespace AppXEvolution
         {
             InitializeComponent();
 
+            SetValue(NavigationPage.BarBackgroundColorProperty, Color.Black);
+
             ButtonClientes.Clicked += (sender, e) =>
             {
                 Navigation.PushAsync(new MainPage());
             };
 
+            ButtonClases.Clicked += (sender, e) =>
+            {
+                Navigation.PushAsync(new Clases());
+            };
         }
 
         /*
