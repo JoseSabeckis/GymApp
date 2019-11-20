@@ -5,7 +5,7 @@
              x:Class="AppXEvolution.Menu"
              xmlns:local="clr-namespace:AppXEvolution">
     <NavigationPage.TitleView>
-        <Label Text="Evolution Training Center" HorizontalOptions="Center"></Label>
+        <Label Text="Evolution Training Center" HorizontalOptions="Center" TextColor="Black"></Label>
     </NavigationPage.TitleView>
 
 
@@ -15,11 +15,9 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
-
-        <Button x:Name="ButtonClientes"
-             Text="Clientes" BackgroundColor="Coral" BorderRadius="40" Padding="5" Margin="10"
-                Grid.Row="2" />
-
+        
+        <Label Text="" Grid.Row="2"></Label>
+        
         <Button x:Name="ButtonClases"
              Text="Clases" BackgroundColor="OrangeRed" BorderRadius="40" Padding="5" Margin="10"
              Grid.Row="3"/>
@@ -27,7 +25,7 @@
         <Button x:Name="ButtonRutinas"
              Text="Rutinas" BackgroundColor="DarkOrange" BorderRadius="40" Padding="5" Margin="10"
              Grid.Row="4"/>
-        <ImageButton Grid.Row="5" WidthRequest="100" HeightRequest="100" Source="{local:ImageResource AppXEvolution.rutina.png}" BackgroundColor="Transparent" Padding="5" Margin="10" x:Name="GymEvolution2"></ImageButton>
+        <ImageButton Grid.Row="5" WidthRequest="90" HeightRequest="90" Source="{local:ImageResource AppXEvolution.rutina.png}" BackgroundColor="Transparent" Padding="5" Margin="10" x:Name="GymEvolution2"></ImageButton>
 
     </Grid>
 
