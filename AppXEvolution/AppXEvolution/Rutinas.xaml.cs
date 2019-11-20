@@ -13,27 +13,26 @@ using Xamarin.Forms.Xaml;
 namespace AppXEvolution
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class Clases : ContentPage
+	public partial class Rutinas : ContentPage
 	{
         private readonly HttpClient _client = new HttpClient();
-        private const string Url = "https://gymevolution.azurewebsites.net/api/Clases";
-        private ObservableCollection<Clase> clases;
+        private const string Url = "https://gymevolution.azurewebsites.net/api/Rutinas";
+        private ObservableCollection<Rutina> clases;
 
-        public Clases ()
-		{
-			InitializeComponent ();
-		}
+        public Rutinas()
+        {
+            InitializeComponent();
+        }
 
         async override protected void OnAppearing()
         {
-            
-            string response = await _client.GetStringAsync(Url);
-            List<Clase> list = JsonConvert.DeserializeObject<List<Clase>>(response);
-            clases = new ObservableCollection<Clase>(list);
-            ItemListClases.ItemsSource = clases;
-            base.OnAppearing();
-            
-        }
 
+            string response = await _client.GetStringAsync(Url);
+            List<Rutina> list = JsonConvert.DeserializeObject<List<Rutina>>(response);
+            clases = new ObservableCollection<Rutina>(list);
+            ItemListRutinas.ItemsSource = clases;
+            base.OnAppearing();
+
+        }
     }
 }

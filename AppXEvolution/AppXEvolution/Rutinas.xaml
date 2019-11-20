@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppXEvolution.Rutinas" Title="Lista Rutinas" BackgroundColor="Black">
+
+    <StackLayout>
+        <!-- Place new controls here -->
+
+        <ListView HasUnevenRows="True" x:Name="ItemListRutinas">
+
+            <ListView.ItemTemplate>
+
+                <DataTemplate>
+
+                    <ViewCell>
+
+                        <StackLayout Padding="10" >
+                            <Grid VerticalOptions="CenterAndExpand" BackgroundColor="Salmon" Padding="10">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <Label Text="Nro Rutina:" Grid.Row="0" Grid.Column="0" LineBreakMode="NoWrap" FontSize="Medium" TextColor="Beige"></Label>
+                                <Label Text="{Binding Id}" Grid.Row="0" Grid.Column="1" LineBreakMode="NoWrap" FontSize="Medium" TextColor="Beige"></Label>
+
+                                <Label Text="{Binding Titulo}"  Grid.Row="1" Grid.Column="0" LineBreakMode="NoWrap" FontSize="Large" TextColor="Black"></Label>
+
+                            </Grid>
+                            <Label Text="Descripcion:" LineBreakMode="NoWrap" FontSize="Small" BackgroundColor="Beige"></Label>
+                            <Label Text="{Binding Descripcion}"  LineBreakMode="NoWrap" FontSize="Small" BackgroundColor="Beige" TextColor="Black"></Label>
+
+                        </StackLayout>
+
+                    </ViewCell>
+
+                </DataTemplate>
+
+
+            </ListView.ItemTemplate>
+
+        </ListView>
+
+    </StackLayout>
+
+</ContentPage>

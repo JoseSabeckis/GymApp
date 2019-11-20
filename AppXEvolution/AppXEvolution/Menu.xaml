@@ -16,10 +16,6 @@
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
-        <Button x:Name="ButtonClientes"
-             Text="Clientes" BackgroundColor="Coral" BorderRadius="40" Padding="5" Margin="10"
-                Grid.Row="2" />
-
         <Button x:Name="ButtonClases"
              Text="Clases" BackgroundColor="OrangeRed" BorderRadius="40" Padding="5" Margin="10"
              Grid.Row="3"/>

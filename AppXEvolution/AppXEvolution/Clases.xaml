@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="AppXEvolution.Clases" Title="Lista Clases">
+             x:Class="AppXEvolution.Clases" Title="Lista Clases" BackgroundColor="Black">
 
     <StackLayout>
         <!-- Place new controls here -->
@@ -16,11 +16,18 @@
 
                         <StackLayout Padding="10" >
 
-                            <Label Text="{Binding Nombre}" LineBreakMode="NoWrap" FontSize="Large"></Label>
-                            <Label Text="{Binding Descripcion}"  LineBreakMode="NoWrap" FontSize="Large"></Label>
-                            <Label Text="{Binding ClaseDetalle}"  LineBreakMode="NoWrap" FontSize="Medium"></Label>
+                            <Grid  VerticalOptions="CenterAndExpand" BackgroundColor="OrangeRed" Padding="10">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
 
+                                <Label Text="{Binding Nombre}" Grid.Row="0" Grid.Column="0" LineBreakMode="NoWrap" FontSize="Large" TextColor="Black"></Label>
+                                <Label Text="Informacion:" Grid.Row="1" Grid.Column="0" LineBreakMode="NoWrap" FontSize="Small" TextColor="Black"></Label>
+                                <Label Text="{Binding Descripcion}" Grid.Row="2" Grid.Column="0" LineBreakMode="NoWrap" FontSize="Small" TextColor="Beige"></Label>
+
+                            </Grid>
                         </StackLayout>
+
 
                     </ViewCell>
 
